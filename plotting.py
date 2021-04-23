@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-file=r'D:\Data\Fac\L3\S6\Info-Stat\Stat\Project - Welch'
+file=r'directory'
 reliability=pd.read_excel(file+r'\ReliabilityR.xlsx')
 power=pd.read_excel(file+r'\PowerR.xlsx')
 
