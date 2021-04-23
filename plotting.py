@@ -30,7 +30,7 @@ def plot(folder, df, m):
                 y_1.append(df.at[k, "ttest"])
                 y_2.append(df.at[k, "welch"])
         axs[pos[i], int(i/size+0.5)].set_title(f"n = {j}")
-        axs[pos[i], int(i/size+0.5)].plot(x, y_1, "ro")
+        axs[pos[i], int(i/size+0.5)].plot(x, y_1, "r^")
         axs[pos[i], int(i/size+0.5)].plot(x, y_1, color="red",lw=1, label="Sans Welch")
         axs[pos[i], int(i/size+0.5)].plot(x, y_2, "bo")
         axs[pos[i], int(i/size+0.5)].plot(x, y_2, color="blue",lw=1, label="Avec Welch")
@@ -45,5 +45,5 @@ def plot(folder, df, m):
 
 # mode="reliability"
 # plot(file, reliability, mode)
-mode="power"
-plot(file, power, mode)
+# mode="power"
+# plot(file, power, mode)
