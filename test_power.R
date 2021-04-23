@@ -1,7 +1,7 @@
-### test de la puissance d'un test t de student ###
+### test de la puissance du test t de student ###
 
 
-n=30     #taille max des échantillons
+n=c(2, 6, 8, 10, 15, 30) #tailles des échantillons
 m=5      #moyenne
 e=1      #ecart type
 d=2      #distance max de la moyenne
@@ -37,20 +37,19 @@ ttest_ratio = function(ne, distance, n_iteration){
 ratio = vector()
 ratioW = vector()
 names = NULL
-sizes=NULL
+size=NULL
 deltas=NULL
-size=seq(5,n,5)
 delta=seq(0.2,d,0.2)
-for (i in size){
+for (i in n){
   for (j in delta){
     ratio = append(ratio, ttest_ratio(i, j, ni)[1])
     ratioW = append(ratioW, ttest_ratio(i, j, ni)[2])
     names = append(names, paste("echB_n", i, "_d", j, sep = ""))
-    sizes = append(sizes, i)
+    size = append(size, i)
     deltas = append(deltas, j)
   }
 }
-liste = list(sizes,deltas,ratio, ratioW)
+liste = list(size,deltas,ratio, ratioW)
 table_ratio=data.frame(liste)
 colnames(table_ratio)=c("size", "delta", "ttest", "welch")
 rownames(table_ratio)=names
