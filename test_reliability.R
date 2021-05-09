@@ -1,16 +1,16 @@
-### test de la fiabilité du test t de student ###
+### test de la fiabilitÃ© du test t de student ###
 
 
-n=c(2, 6, 8, 10, 15, 30) #tailles des échantillons
+n=c(2, 6, 8, 10, 15, 30) #tailles des Ã©chantillons
 e=1      #ecart type de base
 f=4      #facteur multiplicateur max
 s=0.5    #step des facteurs
-ni=10000 #nombre d'itérations du test
+ni=10000 #nombre d'itÃ©rations du test
 
 set.seed(1)
 
 
-                                                        #Itérations du t.test 
+                                                        #ItÃ©rations du t.test 
 
 ttest_ratio = function(ne, facteur, n_iteration){
   ratio = array(0, dim=c(1, 2))
@@ -58,33 +58,4 @@ print(table_ratio)
 
 #export data to excel file
 
-write_xlsx(table_ratio,"D:\\Data\\Fac\\L3\\S6\\Info-Stat\\Stat\\Project - Welch\\ReliabilityR.xlsx")
-
-
-                                                #Représentation des résultats
-
-# windows()
-# 
-# p = ggplot() +
-#   geom_point(data = table_ratio, aes(x = factor, y = ttest)) +
-#   geom_point(data = table_ratio, aes(x = factor, y = welch)) +
-#   geom_line(data = table_ratio, aes(x = factor, y = ttest), size = 0.8, colour = "darkred") +
-#   geom_line(data = table_ratio, aes(x = factor, y = welch), size = 0.8, colour = "steelblue") +
-#   theme_bw() +
-#   xlim(1, 4) +
-#   ylim(0, 15)
-# 
-# n = p +
-#   labs(title = 'T test reliability for n=10',
-#        subtitle = 'plot for factors applied on sd',
-#        x = 'factors',
-#        y= 'reliability'
-#   ) +
-#   scale_fill_discrete(name = 'Caption', labels = c('Without Welch', 'With Welch')) +
-#   theme(
-#     plot.title = element_text(color = "black", size = 12, face = "bold"),
-#     plot.subtitle = element_text(color = "darkgrey"),
-#     plot.caption = element_text(color = "green", face = "italic")
-#   )
-# print(n)
-
+write_xlsx(table_ratio,"C:\\User\\Username\\...\\ReliabilityR.xlsx")
