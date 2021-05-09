@@ -1,16 +1,16 @@
 ### test de la puissance du test t de student ###
 
 
-n=c(2, 6, 8, 10, 15, 30) #tailles des Ã©chantillons
+n=c(2, 6, 8, 10, 15, 30) #tailles des échantillons
 m=5      #moyenne
 e=1      #ecart type
 d=2      #distance max de la moyenne
-ni=10000 #nombre d'itÃ©rations du test
+ni=10000 #nombre d'itérations du test
 
 set.seed(1)
 
 
-                                                      #ItÃ©rations du t.test 
+                                                      #Itérations du t.test 
 
 ttest_ratio = function(ne, distance, n_iteration){
   ratio = array(0, dim=c(1, 2))
@@ -58,10 +58,10 @@ print(table_ratio)
 
 #export data to excel
 
-write_xlsx(table_ratio,"\\PowerR.xlsx")
+write_xlsx(table_ratio,"D:\\Data\\Fac\\L3\\S6\\Info-Stat\\Stat\\Project - Welch\\PowerR.xlsx")
 
 
-#ReprÃ©sentation des rÃ©sultats
+#Représentation des résultats
 
 # windows()
 # par(mfrow=c(2, 3))

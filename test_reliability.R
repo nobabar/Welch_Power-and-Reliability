@@ -1,16 +1,16 @@
-### test de la fiabilitÃ© du test t de student ###
+### test de la fiabilité du test t de student ###
 
 
-n=c(2, 6, 8, 10, 15, 30) #tailles des Ã©chantillons
+n=c(2, 6, 8, 10, 15, 30) #tailles des échantillons
 e=1      #ecart type de base
 f=4      #facteur multiplicateur max
 s=0.5    #step des facteurs
-ni=10000 #nombre d'itÃ©rations du test
+ni=10000 #nombre d'itérations du test
 
 set.seed(1)
 
 
-                                                        #ItÃ©rations du t.test 
+                                                        #Itérations du t.test 
 
 ttest_ratio = function(ne, facteur, n_iteration){
   ratio = array(0, dim=c(1, 2))
@@ -58,10 +58,10 @@ print(table_ratio)
 
 #export data to excel file
 
-write_xlsx(table_ratio,"\\ReliabilityR.xlsx")
+write_xlsx(table_ratio,"D:\\Data\\Fac\\L3\\S6\\Info-Stat\\Stat\\Project - Welch\\ReliabilityR.xlsx")
 
 
-                                                #ReprÃ©sentation des rÃ©sultats
+                                                #Représentation des résultats
 
 # windows()
 # 
